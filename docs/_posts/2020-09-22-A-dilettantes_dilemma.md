@@ -15,11 +15,11 @@ The courses below serve to cover the basic theoretical computer science knowledg
 
 | **MIT OCW** | **Coursera** | **Harvard Online** | **Stanford Online** | 
 | ----------- | ------------ | ------------------ | ------------------- |
-| [6.005](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-software-construction-spring-2016/>)       | rgrr.        |                    |                     |
-| [6.006](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/>)       |
-| [6.431/6.041](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/>) |
-| [6.042](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/>)       |
-| [6.172](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-172-performance-engineering-of-software-systems-fall-2018/>)       |
-| [6.438](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-438-algorithms-for-inference-fall-2014/>)       |
-| [6.851](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/#>)      |
-| [parts of 6.0001](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/syllabus/>) |
+| [6.005](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-software-construction-spring-2016/>)       | [Parts of fundamentals of computing](<https://www.coursera.org/specializations/computer-fundamentals#courses>)        |                    |                     |
+| [6.006](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/>)       | [Data structures & algorithms specialization](<https://www.coursera.org/specializations/data-structures-algorithms#courses>)
+| [6.431/6.041](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/>) | [Computer science, programming with a purpose](<https://www.coursera.org/learn/cs-programming-java#syllabus>)
+| [6.042](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/>)       | [Functional programming with Scala](<https://www.coursera.org/specializations/scala#courses>)
+| [6.172](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-172-performance-engineering-of-software-systems-fall-2018/>)       | [Accelerated comp sci fundamentals](<https://www.coursera.org/specializations/cs-fundamentals#courses>)
+| [6.438](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-438-algorithms-for-inference-fall-2014/>)       | [Algorithms part II](<https://www.coursera.org/learn/algorithms-part2#syllabus>) 
+| [6.851](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/#>)      | [Software design and architecture specialization](<https://www.coursera.org/specializations/software-design-architecture#courses>)
+| [parts of 6.0001](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/syllabus/>) | [AWS fundamentals specialization](<https://www.coursera.org/specializations/aws-fundamentals#courses>)
