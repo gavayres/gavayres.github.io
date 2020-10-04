@@ -22,4 +22,17 @@ The courses below serve to cover the basic theoretical computer science knowledg
 | [6.172](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-172-performance-engineering-of-software-systems-fall-2018/>)       | [Accelerated comp sci fundamentals](<https://www.coursera.org/specializations/cs-fundamentals#courses>)
 | [6.438](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-438-algorithms-for-inference-fall-2014/>)       | [Algorithms part II](<https://www.coursera.org/learn/algorithms-part2#syllabus>) 
 | [6.851](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/#>)      | [Software design and architecture specialization](<https://www.coursera.org/specializations/software-design-architecture#courses>)
-| [parts of 6.0001](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/syllabus/>) | [AWS fundamentals specialization](<https://www.coursera.org/specializations/aws-fundamentals#courses>)
+| [parts of 6.0001](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/syllabus/>) | [AWS fundamentals specialization](<https://www.coursera.org/specializations/aws-fundamentals#courses>) |
+
+### Relevant mathematics 
+Each course listed below assumes pre requisites covered also....I cannot claim to have knowledge of these pre requisites, however, they are so widely available that there's no need to collate links here.
+
+| **MIT OCW** | **Coursera** | **Others** | 
+| ----------- | ------------ | ---------- | 
+| [18.655](<https://ocw.mit.edu/courses/mathematics/18-655-mathematical-statistics-spring-2016/index.htm>) |     dga        |      afgsgea     | 
+| [18.S096](<https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-of-data-science-fall-2015/index.htm>) |        |       | 
+| [18.065 / 18.0651](<https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/>) |        |        | 
+| [18.657](<https://ocw.mit.edu/courses/mathematics/18-657-mathematics-of-machine-learning-fall-2015/index.htm>) |       |       | 
+| [18.024](<https://ocw.mit.edu/courses/mathematics/18-024-multivariable-calculus-with-theory-spring-2011/>) |     |      | 
+| [18.650 / 18.6501](<https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/index.htm>)|       |     |
+
