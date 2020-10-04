@@ -13,10 +13,10 @@ The main subjects of interest (at this point the reader can be forgiven for losi
 ### Computer science fundamentals 
 The courses below serve to cover the basic theoretical computer science knowledge that I have seen to be useful thus far in my short, very short, career.
 
-| **MIT OCW** | **Coursera** | **Harvard Online** | **Stanford Online** | 
-| ----------- | ------------ | ------------------ | ------------------- |
-| [6.005](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-software-construction-spring-2016/>)       | [Parts of fundamentals of computing](<https://www.coursera.org/specializations/computer-fundamentals#courses>)        |                    |                     |
-| [6.006](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/>)       | [Data structures & algorithms specialization](<https://www.coursera.org/specializations/data-structures-algorithms#courses>)
+| **MIT OCW** | **Coursera** | **Others** | 
+| ----------- | ------------ | ---------- | 
+| [6.005](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-software-construction-spring-2016/>)       | [Parts of fundamentals of computing](<https://www.coursera.org/specializations/computer-fundamentals#courses>)        | [\(Harvard\) Introduction to computer science](<https://cs50.harvard.edu/x/2020/>)                  |          
+| [6.006](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/>)       | [Data structures & algorithms specialization](<https://www.coursera.org/specializations/data-structures-algorithms#courses>) | [(Stanford) Game theory: Applications](<https://online.stanford.edu/courses/soe-ycs0004-game-theory-ii-advanced-applications>) |
 | [6.431/6.041](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/>) | [Computer science, programming with a purpose](<https://www.coursera.org/learn/cs-programming-java#syllabus>)
 | [6.042](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/>)       | [Functional programming with Scala](<https://www.coursera.org/specializations/scala#courses>)
 | [6.172](<https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-172-performance-engineering-of-software-systems-fall-2018/>)       | [Accelerated comp sci fundamentals](<https://www.coursera.org/specializations/cs-fundamentals#courses>)
