@@ -29,7 +29,7 @@ Each course listed below assumes pre requisites covered also....I cannot claim t
 
 | **MIT OCW** | **Coursera** | **Others** | 
 | ----------- | ------------ | ---------- | 
-| [18.655](<https://ocw.mit.edu/courses/mathematics/18-655-mathematical-statistics-spring-2016/index.htm>) |[Maths for ML (Imperial) (fairly basic)](<https://www.coursera.org/specializations/mathematics-machine-learning>)|      afgsgea     | 
+| [18.655](<https://ocw.mit.edu/courses/mathematics/18-655-mathematical-statistics-spring-2016/index.htm>) |[Maths for ML (Imperial) (fairly basic)](<https://www.coursera.org/specializations/mathematics-machine-learning>)|         | 
 | [18.S096](<https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-of-data-science-fall-2015/index.htm>) |[Maths for Data Science (HSE) (parts of)](<https://www.coursera.org/specializations/mathematics-for-data-science#courses>) |       | 
 | [18.065 / 18.0651](<https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/>) |        |        | 
 | [18.657](<https://ocw.mit.edu/courses/mathematics/18-657-mathematics-of-machine-learning-fall-2015/index.htm>) |       |       | 
