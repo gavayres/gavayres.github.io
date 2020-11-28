@@ -36,3 +36,10 @@ Each course listed below assumes pre requisites covered also....I cannot claim t
 | [18.024](<https://ocw.mit.edu/courses/mathematics/18-024-multivariable-calculus-with-theory-spring-2011/>) |     |      | 
 | [18.650 / 18.6501](<https://ocw.mit.edu/courses/mathematics/18-650-statistics-for-applications-fall-2016/index.htm>)|       |     |
 
+
+## Courses for horses
+This is where the real fun begins.
+
+### NLP
+- [NLP course Yandex data school](<https://lena-voita.github.io/nlp_course.html#preview_transfer>)
+- [NLP specialization Coursera](<https://www.coursera.org/specializations/natural-language-processing>)
