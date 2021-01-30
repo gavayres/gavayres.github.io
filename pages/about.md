@@ -8,7 +8,7 @@ weight: 3
 # **About Me**
 
 My name is *{{ site.author.name }}*,<br>
-I am a data scientist with many interests but I won't tell you what they are. 
+I am a data scientist with many interests but I won't tell you what they are. <br>
 "When things go wrong and will not come right,
 Though you do the best you can,
 When life looks black as the hour of night,
