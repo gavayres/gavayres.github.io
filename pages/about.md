@@ -9,10 +9,10 @@ weight: 3
 
 My name is *{{ site.author.name }}*,<br>
 I am a data scientist with many interests but I won't tell you what they are. <br>
-"When things go wrong and will not come right,
-Though you do the best you can,
-When life looks black as the hour of night,
-A pint of plain is your only man.”
+"When things go wrong and will not come right, <br>
+Though you do the best you can, <br>
+When life looks black as the hour of night, <br>
+A pint of plain is your only man.” <br>
 \- Flann O'Brien
 
 <div class="row">
