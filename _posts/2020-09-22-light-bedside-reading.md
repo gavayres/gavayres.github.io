@@ -1,6 +1,7 @@
 ---
 layout: post
 title: light bedside reading
+tags: [reading, study]
 excerpt: Whatever to do and whichever order to do it in?
 date: 2020-09-22-23.10.00
 ---
