@@ -13,7 +13,7 @@ I am a data scientist with many interests but I won't tell you what they are.
 Though you do the best you can,
 When life looks black as the hour of night,
 A pint of plain is your only man.”
-- Flann O'Brien
+\- Flann O'Brien
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
