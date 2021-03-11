@@ -1,0 +1,11 @@
+- name: Python
+  percentage: 90
+  color: danger
+
+- name: R
+  percentage: 50
+  color:
+
+- name: Java
+  percentage: 30
+  color: dark
