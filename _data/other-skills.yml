@@ -1,0 +1,7 @@
+- name: Communication
+  percentage: 70
+  color: info
+
+- name: Mediocrity
+  percentage: 100
+  color: success
