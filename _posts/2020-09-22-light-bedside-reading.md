@@ -8,11 +8,9 @@ style: fill
 date: 2020-09-22-23.10.00
 ---
 
-<<<<<<< HEAD:docs/_posts/2020-09-22-A-dilettantes_dilemma.md
 ## What's the point of it all?
 =======
 ## Anxiety inducing study backlogs
->>>>>>> 39ca9e89c055053384d534563afb83700ab47935:_posts/2020-09-22-light-bedside-reading.md
 When starting off in a career as broad as 'Data Science' it can be quite easy to lose ones direction, it can be hard to know which path to choose, what to specialise in and what resources will be relevant along the way. Personally, I have found the many rabbit-holes a first year Analyst can find themselves on a slow Friday afternoon wanting of a solid, practical, discussion of resource choice in particular. Having said that, I have absolutely no intention of contributing more clutter to the search pages on this topic. However, what I do wish to do in this post, is to lay out a plan of sorts which I believe will be useful for *me*. Let it be said, I have no intention of sticking to this plan. Firstly, I will give a high level overview of my immediately, and aspirationally, desired skills; this will be followed by a discussion of the online resources (freely) available to achieve these ends; finally, I will round it all off with a discussion on practical time management, entirely plagiarised from people far cleverer and more diligent than I.
 
 The main subjects of interest (at this point the reader can be forgiven for losing interest) are essentially the biggest gaps in my knowledge, yes my knowledge has more holes than a block of Swiss cheese. 
