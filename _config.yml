@@ -89,7 +89,6 @@ defaults:
       layout: post
       share: true
 
-<<<<<<< HEAD
 # Site Author
 author:
   name:
@@ -106,13 +105,3 @@ footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
-=======
-### Exclude from processing ###
-exclude:
-  - README.md
-  - CONTRIBUTING.md
-  - LICENSE
-  - "*.log"
-
-theme: jekyll-theme-cayman
->>>>>>> 68b8a8dac2549fd272b08204475067ae0b9a362b
