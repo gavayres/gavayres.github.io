@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Weight initialisation and activation functions
+collection: blog
 tags: [neural networks, deep learning, training neural networks]
 excerpt: How a good weight initialisation depends on the choice of activation function
 color: dark

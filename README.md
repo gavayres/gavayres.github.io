@@ -1,6 +1,6 @@
 # A site for the web about me
-This is not meant to be interesting to anyone but to act as a collection for things I think might be worth recording.
+This is not meant to be interesting to anyone but to act as a collection of things I think might be worth recording.
 
 Source
 ---
-Adapted from the jekyll theme [portfolYou](https://youssefraafatnasry.github.io/portfolYOU/)
+Adapted from the jekyll theme [So Simple](https://github.com/mmistakes/so-simple-theme)
