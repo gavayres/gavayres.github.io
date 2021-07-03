@@ -1,6 +1,6 @@
 ---
 title: Blog
 layout: collection
-permalink: /blog/
+permalink: /posts/
 collection: blog
 ---

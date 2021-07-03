@@ -1,5 +1,5 @@
 ---
-title: Books
+title: Library
 layout: page
 permalink: /library/
 ---

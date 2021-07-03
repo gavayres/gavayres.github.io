@@ -1,6 +1,7 @@
 ---
 layout: post
 title: light bedside reading
+collection: blog
 tags: [reading, study]
 excerpt: Whatever to do and whichever order to do it in?
 color: success
