@@ -1,7 +1,6 @@
 # Sample site navigation bar links
-
 - title: Home
-  url: /
+   url: /
  - title: Posts
    url: /posts/
 - title: Books
