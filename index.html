@@ -29,6 +29,10 @@ title: blog
     <link href='/css/blog.css' rel='stylesheet'/>
 
     {% include mathjax.html %}
+    <script src='/assets/dark-mode.js' defer></script>
+    {% if page.margin_left or page.margin_right %}
+    <script src='/assets/margin-toggle.js' defer></script>
+    {% endif %}
 </head>
 <body>
     {% include nav.html %}

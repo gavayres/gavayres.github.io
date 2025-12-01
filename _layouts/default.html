@@ -4,7 +4,7 @@
     <meta charset='UTF-8'>
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
 
-    <meta name='description' content='Gavin Ayres is a Masters student in Southampton'>
+    <meta name='description' content='Gavin Ayres'>
     <meta name='keywords' content='{{ page.keywords }}'>
     <meta name='author' content='Gavin Ayres'>
 
@@ -12,7 +12,13 @@
     <link href='/css/notes.css' rel='stylesheet'/>
     <link href='/css/trac.css' rel='stylesheet'/>
     <link href='/css/markdown.css' rel='stylesheet'/>
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
     {% include mathjax.html %}
+    <script src='/assets/dark-mode.js' defer></script>
+    {% if page.margin_left or page.margin_right %}
+    <script src='/assets/margin-text.js' defer></script>
+    <script src='/assets/margin-toggle.js' defer></script>
+    {% endif %}
 </head>
 <body>
 <div class='content'>
@@ -30,6 +36,10 @@
             <div class='clear'></div>
         </div>
     </div>
+    {% if page.margin_left or page.margin_right %}
+    <div class='margin-text margin-left'>{{ page.margin_left | markdownify }}</div>
+    <div class='margin-text margin-right'>{{ page.margin_right | markdownify }}</div>
+    {% endif %}
     <div class='wrap article'>
         {{ content }}
     </div>

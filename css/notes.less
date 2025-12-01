@@ -2,7 +2,7 @@
 
 html {
   font-family: @font-family;
-  color: rgba(0, 0, 0, 0.8);
+  color: #333333;
   line-height: 1.5em;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -11,6 +11,29 @@ html {
 
 body {
   margin: 0;
+  background-color:#9cc799c8;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
 
   .content {
     margin-bottom: 120px;
@@ -45,6 +68,65 @@ h1 {
   margin: 0 auto;
 }
 
+.margin-text {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: calc((100% - 700px) / 2);
+  padding: 20px;
+  padding-top: 0;
+  font-family: "Chalkboard", "Chalkboard SE", "Comic Sans MS", "Marker Felt", "Bradley Hand", cursive;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  word-wrap: break-word;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+body.margins-hidden .margin-text {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.margins-hidden::before,
+body.margins-hidden::after {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+  ul, ol {
+    margin: 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+    padding-left: 0;
+  }
+
+  p {
+    margin: 0 0 0.5em 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.margin-left {
+    left: 0;
+    text-align: left;
+  }
+
+  &.margin-right {
+    right: 0;
+    text-align: right;
+  }
+}
+
 .mono {
   font-family: monospace;
 }
@@ -71,16 +153,70 @@ h1 {
       margin-right: 10px;
     }
   }
+
+  .dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .margin-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .margin-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .front-matter {
   padding: 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
 
   h4 {
     font-family: @font-family;
   }
+}
+
+body.margins-hidden .front-matter {
+  border-bottom-color: transparent !important;
+  border-top-color: transparent !important;
+}
+
+body.dark-mode.margins-hidden .front-matter {
+  border-bottom-color: transparent !important;
+  border-top-color: transparent !important;
+}
   .bylines {
 
     .byline {
@@ -241,5 +377,107 @@ hr {
 @media screen and (max-width: 700px) {
   body {
     margin: 0 7px;
+    
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .margin-text {
+    display: none;
+  }
+}
+
+// Dark mode styles
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+
+  &::before,
+  &::after {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .margin-text {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .nav .margin-toggle {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  html {
+    color: #e0e0e0;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .nav {
+    a {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .dark-mode-toggle {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .front-matter {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease !important;
+
+    .bylines .byline {
+      h3 {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  .article {
+    color: rgba(255, 255, 255, 0.8);
+
+    blockquote {
+      color: #aaa;
+      border-left: 0.25em solid #666;
+    }
+
+    h2 {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .figure {
+      border-top: 1px solid hsla(0, 0, 100%, 0.2);
+      border-bottom: 1px solid hsla(0, 0, 100%, 0.2);
+    }
+
+    div.highlight {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    hr {
+      border-top: 1px solid rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  #bibliography {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    ol.bibliography {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  #notes {
+    .note-date {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .year {
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
 }

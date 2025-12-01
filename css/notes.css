@@ -1,6 +1,6 @@
 html {
     font-family: -apple-system, Helvetica, arial, sans-serif;
-    color: rgba(0, 0, 0, 0.8);
+    color: #333333;
     line-height: 1.5em;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -8,6 +8,27 @@ html {
   }
   body {
     margin: 0;
+    background-color: #9cc799c8;
+    position: relative;
+  }
+  body::before,
+  body::after {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 1px !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    z-index: 9999 !important;
+    pointer-events: none !important;
+    display: block !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+  body::before {
+    left: calc((100% - 700px) / 2) !important;
+  }
+  body::after {
+    right: calc((100% - 700px) / 2) !important;
   }
   body .content {
     margin-bottom: 120px;
@@ -39,6 +60,56 @@ html {
     max-width: 700px;
     margin: 0 auto;
   }
+  .margin-text {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: calc((100% - 700px) / 2);
+    padding: 20px;
+    padding-top: 0;
+    font-family: "Chalkboard", "Chalkboard SE", "Comic Sans MS", "Marker Felt", "Bradley Hand", cursive;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  body.margins-hidden .margin-text {
+    opacity: 0;
+    visibility: hidden;
+  }
+  body.margins-hidden::before,
+  body.margins-hidden::after {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  .margin-text ul,
+  .margin-text ol {
+    margin: 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  .margin-text li {
+    margin-bottom: 0.5em;
+    padding-left: 0;
+  }
+  .margin-text p {
+    margin: 0 0 0.5em 0;
+  }
+  .margin-text p:last-child {
+    margin-bottom: 0;
+  }
+  .margin-left {
+    left: 0;
+    text-align: left;
+  }
+  .margin-right {
+    right: 0;
+    text-align: right;
+  }
   .mono {
     font-family: monospace;
   }
@@ -63,10 +134,41 @@ html {
     display: inline;
     margin-right: 10px;
   }
+  .nav .dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: #333333;
+    transition: transform 0.2s;
+  }
+  .nav .dark-mode-toggle:hover {
+    transform: scale(1.2);
+  }
+  .nav .margin-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+  }
+  .nav .margin-toggle:hover {
+    transform: scale(1.2);
+  }
   .front-matter {
     padding: 20px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease !important;
+  }
+  body.margins-hidden .front-matter {
+    border-bottom-color: transparent !important;
+    border-top-color: transparent !important;
   }
   .front-matter h4 {
     font-family: -apple-system, Helvetica, arial, sans-serif;
@@ -210,4 +312,83 @@ html {
     body {
       margin: 0 7px;
     }
+    body::before,
+    body::after {
+      display: none !important;
+    }
+    .margin-text {
+      display: none !important;
+    }
+  }
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  body.dark-mode::before,
+  body.dark-mode::after {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  body.dark-mode .margin-text {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+  body.dark-mode .nav .margin-toggle {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  body.dark-mode html {
+    color: #e0e0e0;
+  }
+  body.dark-mode a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  body.dark-mode .nav a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  body.dark-mode .nav .dark-mode-toggle {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  body.dark-mode .front-matter {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease !important;
+  }
+  body.dark-mode.margins-hidden .front-matter {
+    border-bottom-color: transparent !important;
+    border-top-color: transparent !important;
+  }
+  body.dark-mode .front-matter .bylines .byline h3 {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  body.dark-mode .article {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  body.dark-mode .article blockquote {
+    color: #aaa;
+    border-left: 0.25em solid #666;
+  }
+  body.dark-mode .article h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode .article .figure {
+    border-top: 1px solid hsla(0, 0, 100%, 0.2);
+    border-bottom: 1px solid hsla(0, 0, 100%, 0.2);
+  }
+  body.dark-mode .article div.highlight {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode .article hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  body.dark-mode #bibliography {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  body.dark-mode #bibliography ol.bibliography {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  body.dark-mode #notes .note-date {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  body.dark-mode #notes .year {
+    color: rgba(255, 255, 255, 0.5);
   }
