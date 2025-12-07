@@ -1,6 +1,7 @@
 ---
 permalink: /blog/
 title: Blog
+layout: default
 ---
 <div id='blog' class='wrap'>
     <div id='intro'>

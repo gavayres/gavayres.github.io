@@ -11,25 +11,6 @@ html {
     background-color: #9cc799c8;
     position: relative;
   }
-  body::before,
-  body::after {
-    content: '' !important;
-    position: fixed !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 1px !important;
-    background-color: rgba(0, 0, 0, 0.2) !important;
-    z-index: 9999 !important;
-    pointer-events: none !important;
-    display: block !important;
-    transition: opacity 0.3s ease, visibility 0.3s ease !important;
-  }
-  body::before {
-    left: calc((100% - 700px) / 2) !important;
-  }
-  body::after {
-    right: calc((100% - 700px) / 2) !important;
-  }
   body .content {
     margin-bottom: 120px;
   }
@@ -76,15 +57,12 @@ html {
     overflow: hidden;
     word-wrap: break-word;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-  body.margins-hidden .margin-text {
     opacity: 0;
     visibility: hidden;
   }
-  body.margins-hidden::before,
-  body.margins-hidden::after {
-    opacity: 0 !important;
-    visibility: hidden !important;
+  body.margins-visible .margin-text {
+    opacity: 1;
+    visibility: visible;
   }
   .margin-text ul,
   .margin-text ol {
@@ -162,13 +140,13 @@ html {
   }
   .front-matter {
     padding: 20px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid transparent !important;
+    border-top: 1px solid transparent !important;
     transition: border-color 0.3s ease !important;
   }
-  body.margins-hidden .front-matter {
-    border-bottom-color: transparent !important;
-    border-top-color: transparent !important;
+  body.margins-visible .front-matter {
+    border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+    border-top-color: rgba(0, 0, 0, 0.1) !important;
   }
   .front-matter h4 {
     font-family: -apple-system, Helvetica, arial, sans-serif;
@@ -312,10 +290,6 @@ html {
     body {
       margin: 0 7px;
     }
-    body::before,
-    body::after {
-      display: none !important;
-    }
     .margin-text {
       display: none !important;
     }
@@ -324,10 +298,6 @@ html {
   body.dark-mode {
     background-color: #1a1a1a;
     color: #e0e0e0;
-  }
-  body.dark-mode::before,
-  body.dark-mode::after {
-    background-color: rgba(255, 255, 255, 0.2) !important;
   }
   body.dark-mode .margin-text {
     color: rgba(255, 255, 255, 0.5) !important;
@@ -348,13 +318,13 @@ html {
     color: rgba(255, 255, 255, 0.6);
   }
   body.dark-mode .front-matter {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid transparent !important;
+    border-top: 1px solid transparent !important;
     transition: border-color 0.3s ease !important;
   }
-  body.dark-mode.margins-hidden .front-matter {
-    border-bottom-color: transparent !important;
-    border-top-color: transparent !important;
+  body.dark-mode.margins-visible .front-matter {
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
   }
   body.dark-mode .front-matter .bylines .byline h3 {
     color: rgba(255, 255, 255, 0.5);

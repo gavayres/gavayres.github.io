@@ -1,6 +1,7 @@
 ---
 permalink: /notes/
 title: Notes
+layout: default
 ---
 <div id='notes' class='wrap'>
     <div id='intro'>

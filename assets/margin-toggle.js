@@ -15,13 +15,13 @@
     marginToggle.style.display = 'inline-block';
   }
 
-  // Check for saved preference or default to visible
+  // Check for saved preference or default to hidden
   const marginsVisible = localStorage.getItem('marginsVisible');
-  const shouldShow = marginsVisible === null || marginsVisible === 'true';
+  const shouldShow = marginsVisible === 'true';
 
-  // Apply initial state
-  if (!shouldShow) {
-    document.body.classList.add('margins-hidden');
+  // Apply initial state - default to hidden
+  if (shouldShow) {
+    document.body.classList.add('margins-visible');
     if (marginToggle) {
       marginToggle.textContent = ' | ';
     }
@@ -34,13 +34,15 @@
   // Toggle margins when button is clicked
   if (marginToggle) {
     marginToggle.addEventListener('click', function() {
-      const isHidden = document.body.classList.toggle('margins-hidden');
+      const isVisible = document.body.classList.toggle('margins-visible');
       
       // Update button icon
-      marginToggle.textContent = isHidden ? ' | ' : '|||';
+      // When margins are hidden, show ||| (indicating they can be shown)
+      // When margins are visible, show | (indicating they can be hidden)
+      marginToggle.textContent = isVisible ? ' | ' : '|||';
       
       // Save preference to localStorage
-      localStorage.setItem('marginsVisible', !isHidden ? 'true' : 'false');
+      localStorage.setItem('marginsVisible', isVisible ? 'true' : 'false');
     });
   }
 })();

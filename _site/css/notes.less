@@ -14,27 +14,6 @@ body {
   background-color:#9cc799c8;
   position: relative;
 
-  &::before,
-  &::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  &::before {
-    left: 0;
-  }
-
-  &::after {
-    right: 0;
-  }
-
   .content {
     margin-bottom: 120px;
   }
@@ -84,17 +63,13 @@ h1 {
   overflow: hidden;
   word-wrap: break-word;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-body.margins-hidden .margin-text {
   opacity: 0;
   visibility: hidden;
 }
 
-body.margins-hidden::before,
-body.margins-hidden::after {
-  opacity: 0 !important;
-  visibility: hidden !important;
+body.margins-visible .margin-text {
+  opacity: 1;
+  visibility: visible;
 }
 
   ul, ol {
@@ -199,8 +174,8 @@ body.margins-hidden::after {
 
 .front-matter {
   padding: 20px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid transparent !important;
+  border-top: 1px solid transparent !important;
   transition: border-color 0.3s ease;
 
   h4 {
@@ -208,14 +183,14 @@ body.margins-hidden::after {
   }
 }
 
-body.margins-hidden .front-matter {
-  border-bottom-color: transparent !important;
-  border-top-color: transparent !important;
+body.margins-visible .front-matter {
+  border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+  border-top-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-body.dark-mode.margins-hidden .front-matter {
-  border-bottom-color: transparent !important;
-  border-top-color: transparent !important;
+body.dark-mode.margins-visible .front-matter {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
 }
   .bylines {
 
@@ -377,11 +352,6 @@ hr {
 @media screen and (max-width: 700px) {
   body {
     margin: 0 7px;
-    
-    &::before,
-    &::after {
-      display: none;
-    }
   }
 
   .margin-text {
@@ -393,11 +363,6 @@ hr {
 body.dark-mode {
   background-color: #1a1a1a;
   color: #e0e0e0;
-
-  &::before,
-  &::after {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
 
   .margin-text {
     color: rgba(255, 255, 255, 0.5);
