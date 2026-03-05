@@ -13,6 +13,7 @@
     <link href='/css/trac.css' rel='stylesheet'/>
     <link href='/css/markdown.css' rel='stylesheet'/>
     <link rel="alternate" type="application/atom+xml" title="Gavins Homepage" href="/feed.xml" />
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script type='text/x-mathjax-config'>
 MathJax.Hub.Config({
   jax: ['input/TeX', 'output/HTML-CSS'],
@@ -71,10 +72,12 @@ MathJax.Hub.Config({
         </div>
     </div>
     
-    <div class='margin-text margin-left'><h2 id="important-notes">Important notes</h2>
-<ul>
-  <li>This is the text on the left side of the margin.</li>
-</ul>
+    <div class='margin-text margin-left'><h2 id="ai-limerick">AI Limerick</h2>
+<p>There once was a matrix so tall,<br />
+Whose columns weren’t orthogonal at all.<br />
+With U, Sigma, V,<br />
+It decomposed with glee,<br />
+And captured the variance of all.</p>
 </div>
     <div class='margin-text margin-right'><h2 id="questions">Questions</h2>
 <p>This is the second thing I wish to write. It will be a boring paragraph.</p>
@@ -99,28 +102,30 @@ MathJax.Hub.Config({
 
 <script src="/assets/svd-demo.js"></script>
 
-<h1 id="the-determinant">The determinant</h1>
-<p>Imagine you have a little box, a unit cube, sitting at the origin of your coordinate system. It has a volume of exactly one. Now, apply your linear transformation, your matrix, to every point in space. What happens to our box? It might be stretched, squashed, or sheared into a parallelepiped. The volume it contains, the amount of ‘stuff’ that fits inside it, will change, but by how much?</p>
+<h2 id="the-determinant">The determinant</h2>
+<p>Suppose we have a unit cube. This, by definition, has a volume of exactly one. After we apply a matrix to the co-ordinate system our unit cube lives in, we know something will change. The cube may no longer even be a cube, we are likely to distort the original co-ordinate system in some way. It might be stretched, squashed, or sheared into a parallelepiped.</p>
 
-<p>The determinant is the answer to that question. It is the factor by which the volume of our little box is scaled. If the determinant is 2, your box has doubled in volume. If it is 0, the box has been squashed flat. All the volume is gone, as is a dimension.</p>
+<p>Can we say anything about what will happen to the volume of the transformed cube? Well, we could apply the transformation and then directly compute the volume of the transformed cube. But there is a much more elegant way. That way is known as the determinant. It is a property of the matrix/linear transformation we applied and it is the factor by which the volume of our little box is scaled. If the determinant is 2, the box has doubled in volume. If it is 0, the box has been squashed flat and all the volume is gone, as is a dimension.</p>
 
-<p>This connects with eigenvalues. If you align yourself with the “natural” axes of the transformation (the eigenvectors), the matrix acts purely by stretching or shrinking along those lines. The eigenvalues are just the stretching factors. So, if you stretch by $\lambda_1$ in one direction and $\lambda_2$ in another, the total volume change is just their product $\lambda_1 \lambda_2 \dots \lambda_n$. That is why the determinant is the product of the eigenvalues as it measures the total expansion of space.</p>
+<h2 id="eigenvalues">Eigenvalues</h2>
+<p>This connects with eigenvalues. If we align ourselves with the “natural” axes of the transformation (the eigenvectors), the matrix acts purely by stretching or shrinking along those lines. The eigenvalues are just the stretching factors. So, if we stretch by $\lambda_1$ in one direction and $\lambda_2$ in another, the total volume change is just their product $\lambda_1 \lambda_2 \dots \lambda_n$. That is why the determinant is the product of the eigenvalues as it measures the total expansion of space.</p>
 
-<p>Now, how do we know what the “natural” axes of the transformation are? We look for the directions that resist the urge to rotate. In the general shuffle of a linear transformation, almost every vector gets knocked off its original path and pointed somewhere new. But there are a few special, stubborn vectors that stay on their own line. They might get longer, they might get shorter, but they don’t turn. These are our eigenvectors, and they are the key that unlocks the geometry of the entire transformation. We have described these eigenvectors as vectors whose direction does not change. Therefore, they must be the vectors that are unchanged by the linear transformation up to a scalar multiple. We can write down an equation formalising this intuition; $Av = \lambda v$ for some scalar $\lambda$ which we will call the eigenvalue corresponding to the eigenvector $v$.</p>
+<p>Now, how do we know what the “natural” axes of the transformation are? We look for the directions that resist the urge to rotate. In the general shuffle of a linear transformation, almost every vector gets knocked off its original path and pointed somewhere new. But there are a few stubborn vectors that stay on their own line. They might get longer, they might get shorter, but they don’t turn. These are our eigenvectors. So the eigenvectors are the vectors that are unchanged by the linear transformation up to a scalar multiple. We can write down an equation formalising this intuition; $Av = \lambda v$ for some scalar $\lambda$ which we will call the eigenvalue corresponding to the eigenvector $v$.</p>
 
-<p>Eigenvectors, we have established, help us understand the geometry of a linear transformation by giving us an invariant direction corresponding to each dimension of the transformation. Eigenvalues tell us the amount by which the transformation stretches or shrinks along those directions. What if your transformation rotates everything? Then <em>nothing</em> stays on its line. Or worse, what if your matrix isn’t even square? What if it takes you from a 3D world to a 2D sheet? You can’t have an ‘eigenvector’ that goes in as a 3D arrow and comes out as a 2D arrow pointing in the ‘same’ direction. The dimensions do not match.</p>
+<p>Eigenvectors help us understand the geometry of a linear transformation by giving us an invariant direction corresponding to each dimension of the transformation. Eigenvalues tell us the amount by which the transformation stretches or shrinks along those directions. What if our transformation rotates everything? Then <em>nothing</em> stays on its line. Or worse, what if our matrix isn’t even square? What if it takes us from a 3D world to a 2D sheet? You can’t have an ‘eigenvector’ that goes in as a 3D arrow and comes out as a 2D arrow pointing in the ‘same’ direction if the dimensions do not match.</p>
 
-<p>Enter the <strong>singular values</strong>. If I have a vector $x$ of length , a unit vector pointing in some direction, how long is the new vector $Ax$? We want to find the direction $x$ that maximizes this length. We want to find the direction of maximum stretch.</p>
+<h2 id="singular-values">Singular values</h2>
+<p>Enter the <strong>singular values</strong>. If we have a vector $x$ of length , a unit vector pointing in some direction, how long is the new vector $Ax$? We want to find the direction $x$ that maximizes this length, the direction of maximum stretch.</p>
 
-<p>Mathematically, we want to maximize the squared length $|Ax|^2$. Why squared? Because it’s easier to work with products than square roots. We can write this length as the dot product of the vector with itself:
+<p>Mathematically, we want to maximize the squared length $|Ax|^2$. Why squared? Because square roots suck. We can write this length as the dot product of the vector with itself:
 \(\|Ax\|^2 = (Ax) \cdot (Ax) = (Ax)^T (Ax)\)
 Using the rules of matrix transposes, this becomes:
 \(x^T A^T A x\)
-Look at that new beast in the middle, $S = A^T A$. This matrix $S$ is special. It’s symmetric. It’s square. And essentially, it measures how much $A$ stretches things, regardless of where $A$ actually sends them. We could think of it as the metric tensor of the transformation as it encodes all the geometry of the transformation. For any two vectors $u$ and $v$, the dot product after transformation is $(Au) \cdot (Av) = u^T A^T A v = u^T S v$. The matrix $S$ captures this.</p>
+The matrix $A^T A$ is special. It’s square, symmetric, and positive semi-definite. It measures how much $A$ stretches things, regardless of where $A$ actually sends them. We could think of it as the metric tensor of the transformation as it encodes all the geometry of the transformation. For any two vectors $u$ and $v$, the dot product after transformation is $(Au) \cdot (Av) = u^T A^T A v$. The matrix $A^T A$ captures this.</p>
 
-<p>The problem of maximizing $x^T S x$ for a unit vector $x$ is a famous one. We can solve it using Lagrange multipliers; maximise $x^T S x$ subject to $x^T x = 1$. Taking derivatives gives us $\nabla_x (x^T S x) = 2 S x$ and $\nabla_x (x^T x) = 2 x$. Setting these equal and solving for $x$ gives us $S x = \lambda x$ for some scalar $\lambda$. This shows that $x$ must be an eigenvector of this symmetric matrix $S$ and the maximum value is the largest eigenvalue of $S$, let’s call it $\sigma_1^2$.</p>
+<p>For brevity, let’s call $S = A^T A$. The problem of maximizing $x^T S x$ for a unit vector $x$ should be a familiar one. We can solve it using Lagrange multipliers; maximise $x^T S x$ subject to $x^T x = 1$. Taking derivatives gives us $\nabla_x (x^T S x) = 2 S x$ and $\nabla_x (x^T x) = 2 x$. Setting these equal and solving for $x$ gives us $S x = \lambda x$ for some scalar $\lambda$. This shows that $x$ must be an eigenvector of this symmetric matrix $S$ and the maximum value is the largest eigenvalue of $S$, let’s call it $\sigma_1^2$.</p>
 
-<p>So, the maximum stretch is $\sigma_1 = \sqrt{\lambda_{\text{max}}(A^T A)}$. This $\sigma_1$ is our first <strong>singular value</strong>. It tells us the length of the longest axis of the ellipsoid that our unit sphere turns into. We can then find the next direction, perpendicular to the first, that maximizes the stretch among what’s left. These lengths—$\sigma_1, \sigma_2, \dots$—are the singular values. They describe the geometry of the transformation completely, without worrying about whether the input and output spaces are the same.</p>
+<p>So, the maximum stretch is $\sigma_1 = \sqrt{\lambda_{\text{max}}(A^T A)}$. This $\sigma_1$ is our first <strong>singular value</strong>. It tells us the length of the longest axis of the ellipsoid that our unit sphere turns into. We can then find the next direction, perpendicular to the first, that maximizes the stretch among what’s left. These lengths, $\sigma_1, \sigma_2, \dots$, are the singular values. They describe the geometry of the transformation completely, without worrying about whether the input and output spaces are the same.</p>
 
 <p>We can keep going. What about the third longest axis? We can find it by maximising $x^T S x$ subject to $x^T x = 1$ and $x \perp {v_2, v_2}$. Becuase $A^{T}A$ is symmetric each eigenvector is orthogonal to all the others when their eigenvalues are distinct.</p>
 
@@ -132,7 +137,31 @@ Look at that new beast in the middle, $S = A^T A$. This matrix $S$ is special. I
 
 <p>The transformation takes an orthogonal set of input directions and stretches each by a factor of $\sigma_i$ while rotating to point along output directions $u_i$. The singular values are the answer to the question of how much a transformation stretches space along its natural directions, those that remain perpendicular in the output space, and we can guarantee these directions exist for <em>any</em> matrix(!) because $A^{T}A$ is always symmetric.</p>
 
+<h2 id="uses-of-singular-values">Uses of singular values</h2>
+<p>There are only a small subset of use cases listed here. These are ones I found personally interesting because they show the breadth of applications for which the singular values of a matrix are useful.</p>
+<h3 id="norms">Norms</h3>
+<p>We can use singular values to define some matrix norms. Why? Because, well, why not. So long as they satisfy the triangle inequality, nonegativity and linearity then we are free to use whatever we want to define the norm. We have the spectral norm, which is defined by the largest singular value. This measures the maximum stretching our matrix applies to any unit vector. Then there is the Frobenius norm, which is defined as the square root of the sum of the square of the singular values. We have the nuclear norm, which is simply the sum of the singular values. This norm is especially useful as it is the tightest convex relaxation of the rank function and it is a dual norm for the spectral norm. There are also generalisations of these norms. In machine learning, norms can be used as powerful regularisers enforcing properties on our weight matrices.</p>
+<h3 id="compressed-sensing">Compressed sensing</h3>
+
+<h3 id="subspace-tracking">Subspace tracking</h3>
+
+<h3 id="covariance-estimation">Covariance estimation</h3>
+
+<h3 id="shape-matching">Shape matching</h3>
+
+<h3 id="condition-number">Condition number</h3>
+<h2 id="finding-singular-values">Finding singular values</h2>
+<p>As above, only a small selection of methods are listed here. These were mostly chosen on the basis that the algorithms are clever and fairly easy to comprehend.</p>
+<h3 id="jacobi-svd">Jacobi SVD</h3>
+<h3 id="subspace-iteration">Subspace iteration</h3>
+<h3 id="randomized-svd">Randomized SVD</h3>
+
+<h1 id="invariant-directions-for-other-linear-transformations">Invariant directions for other linear transformations</h1>
+
     </div>
 </div>
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>

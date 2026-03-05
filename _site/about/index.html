@@ -13,6 +13,7 @@
     <link href='/css/trac.css' rel='stylesheet'/>
     <link href='/css/markdown.css' rel='stylesheet'/>
     <link rel="alternate" type="application/atom+xml" title="Gavins Homepage" href="/feed.xml" />
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script type='text/x-mathjax-config'>
 MathJax.Hub.Config({
   jax: ['input/TeX', 'output/HTML-CSS'],
@@ -58,9 +59,44 @@ MathJax.Hub.Config({
     </div>
     
     <div class='wrap article'>
-        <p>They say you can tell a lot about a person by the <a href="https://www.goodreads.com/user/show/174592700-gavin-ayres">books they read</a>.</p>
+        <div class="about-container">
+    <div class="about-header">
+        <div class="about-bio">
+           <p>I am a machine learning researcher working at Basecamp Research. I am particularly interested in applications of machine learning to the life sciences.</p> 
+            <p>This website is a dump of my thoughts. It is not intended to be educational, informative or useful in any way. But if, by accident, you find any post on this site is well described by those adjectives then please inform me immediately.</p>
+        </div>
+    </div>
+
+    <div class="about-footer">
+        <p><a href="https://www.goodreads.com/user/show/174592700-gavin-ayres" target="_blank">books</a>.</p>
+    </div>
+
+    <div class="social-links-container">
+        <h3>Reach out (I'll be there)</h3>
+        <ul class="social-links">
+            <li>
+                <a href="https://github.com/gavayres" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="github"></i> GitHub
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/gavinayres" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="mailto:gavinayres@icloud.com">
+                    <i data-lucide="mail"></i> Email
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 
     </div>
 </div>
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
