@@ -13,6 +13,7 @@
     <link href='/css/trac.css' rel='stylesheet'/>
     <link href='/css/markdown.css' rel='stylesheet'/>
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
+    <script src="https://unpkg.com/lucide@latest"></script>
     {% include mathjax.html %}
     <script src='/assets/dark-mode.js' defer></script>
     {% if page.margin_left or page.margin_right %}
@@ -54,5 +55,8 @@
         {{ content }}
     </div>
 </div>
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
