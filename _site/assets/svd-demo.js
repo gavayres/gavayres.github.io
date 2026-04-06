@@ -246,7 +246,7 @@ const SVDDemo = () => {
   return React.createElement('div', { style: { maxWidth: '900px', margin: '0 auto', padding: '20px' } },
     React.createElement('div', { style: { borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' } },
       React.createElement('div', { style: { borderBottom: '1px solid', borderColor: 'inherit', padding: '20px' } },
-        React.createElement('h2', { style: { fontSize: '24px', fontWeight: '600', margin: 0 } }, 'Matrices, eigenvalues, and singular values')
+        React.createElement('h2', { style: { fontSize: '24px', fontWeight: '600', margin: 0 } }, 'Matrices, eigenvectors, and singular vectors')
       ),
       React.createElement('div', { style: { padding: '20px' } },
         React.createElement('canvas', {
